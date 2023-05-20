@@ -1,0 +1,231 @@
+<html>
+    <head>
+        <title>BP - 2. AOI selection</title>
+        <link rel="stylesheet" type="text/css" href="./assets/css/main.min.css" />
+        <link rel="stylesheet" type="text/css" href="./assets/css/graphs.min.css" />
+        
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+        <!-- jQuery -->
+        <script
+        src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+        crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="stepper">
+                <div class="step finished">
+                    <div class="step__image">
+                        <img src="./assets/images/icons/images.svg" alt="Ikona obrázky"/>
+                    </div>
+                </div>
+                <div class="step-connect finished"></div>
+                <div class="step finished">
+                    <div class="step__image">
+                        <img src="./assets/images/icons/vector-square.svg" alt="Ikona výber"/>
+                    </div>
+                </div>
+                <div class="step-connect finished"></div>
+                <div class="step finished">
+                    <div class="step__image">
+                        <img src="./assets/images/icons/video.svg" alt="Ikona nahrávky"/>
+                    </div>
+                </div>
+                <div class="step-connect finished"></div>
+                <div class="step current">
+                    <div class="step__image">
+                        <img src="./assets/images/icons/group.svg" alt="Ikona vizualizácie"/>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <h1>Graph visulatization</h1>
+            <div class="graph-content">
+                <div class="graph-modules">
+
+                </div>
+                <div class="graph-main-area">
+                    <p style="font-weight: bold;">
+                        Analyzing <span id="module-name">MODULE 1</span>
+                    </p>
+                    <div class="graph-area">
+                        <canvas id="chart"></canvas>
+                    </div>
+                    <div class="swiper module-swiper">
+                        <div class="swiper-wrapper">
+    
+                        </div>
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+                <div class="graph-settings-tab">
+                    <!--div class="settings-selection" style="margin-bottom: 1rem">
+                        <div class="settings-selection-item">
+                            <h3>Select object</h3>
+                            <select id="module-selection-1">
+
+                            </select>
+                        </div>
+                        <div class="settings-selection-item">
+                            <h3>Compare against</h3>
+                            <select id="module-selection-2">
+
+                            </select>
+                        </div>
+                    </div-->
+                    <div class="settings-selection">
+                        <div class="settings-selection-item">
+                            <h3>Select participants</h3>
+                            <select id="participants-selection-1">
+                            </select>
+                        </div>
+                        <div class="settings-selection-item">
+                            <h3>Compare against</h3>
+                            <select id="participants-selection-2">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="settings-table">
+                        <h3>Select variables</h3>
+                        <div class="settings-table-row">
+                            <p>X axis metric</p>
+                            <select>
+                                <option selected>Image</option>
+                                <option>Module</option>
+                            </select>
+                        </div>
+                        <div class="settings-table-row">
+                            <p>Y axis metric</p>
+                            <select id="y-axis-metric">
+                                <option>Fixation count</option>
+                                <option selected>Fixation duration</option>
+                                <option>Time to first fixation</option>
+                            </select>
+                        </div>
+                        <div class="settings-table-row">
+                            <p>X axis dimension</p>
+                            <select disabled>
+                                <option selected>UNAVAILABLE</option>
+                                <option></option>
+                                <option></option>
+                            </select>
+                        </div>
+                        <div class="settings-table-row">
+                            <p>Y axis dimension</p>
+                            <select>
+                                <option selected>milliseconds</option>
+                                <option>seconds</option>
+                            </select>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="btn-nav back" style="width: 300px">
+                BACK TO RECORDINGS
+            </div>
+            <div class="btn-nav positive">
+                SAVE CHART
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script>
+        const ctx = document.getElementById('chart');
+
+        function generateGraphData(count, decimals) {
+            let data = [];
+            decimals = decimals || 0;
+            for (let i = 0; i < count; i++) {
+                // generate random numbers between 60 and 100 use 2 decimals
+                data.push((Math.random() * 4000 + 500).toFixed(decimals));
+
+
+            }
+            return data;
+        }
+
+
+        // generate random data
+
+        var variableName = "Fixation duration";
+
+        function rerenderChart(render) {
+
+            var canvas = document.getElementById("chart");
+
+            // Check if a chart is already created on this canvas
+            if (canvas.chart) {
+                // If a chart exists, destroy it before rendering a new one
+                canvas.chart.destroy();
+            }
+
+            const data = generateGraphData(20, 'seconds', 2);
+
+
+            var studentData = generateGraphData(5, 'seconds', 2);
+            var teacherData = generateGraphData(5, 'seconds', 2);
+
+            var imageLabels = [`${variableName} [Image 1]`, `${variableName} [Image 2]`, `${variableName} [Image 3]`, `${variableName} [Image 4]`, `${variableName} [Image 5]`];
+
+            // Create chart data object
+            var chartData = {
+                labels: imageLabels,
+                datasets: [
+                    {
+                        label: "Students",
+                        backgroundColor: "rgba(255, 99, 132, 0.5)",
+                        borderColor: "rgb(255, 99, 132)",
+                        borderWidth: 1,
+                        data: studentData
+                    },
+                    {
+                        label: "Teachers",
+                        backgroundColor: "rgba(54, 162, 235, 0.5)",
+                        borderColor: "rgb(54, 162, 235)",
+                        borderWidth: 1,
+                        data: teacherData
+                    }
+                ]
+            };
+
+            // Create chart options object
+            var chartOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                            beginAtZero: true
+                        }
+                }
+            };
+            if(render){
+                // Create new bar chart object
+                var myChart = new Chart(document.getElementById("chart"), {
+                    type: 'bar',
+                    data: chartData,
+                    options: chartOptions
+                });
+
+                canvas.chart = myChart;
+            }
+        }
+        
+
+
+
+        rerenderChart();
+        </script>
+
+
+        <script src="./assets/scripts/graphs.js"></script>
+
+    </body>
+</html>

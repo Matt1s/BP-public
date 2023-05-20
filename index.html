@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>BP - 1. Modules</title>
+        <link rel="stylesheet" type="text/css" href="./assets/css/main.min.css" />
+        <link rel="stylesheet" type="text/css" href="./assets/css/modules.min.css" />
+        
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+        <!-- jQuery -->
+        <script
+        src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+        crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="stepper">
+                <div class="step current">
+                    <div class="step__image">
+                        <img src="./assets/images/icons/images.svg" alt="Ikona obrázky"/>
+                    </div>
+                </div>
+                <div class="step-connect"></div>
+                <div class="step">
+                    <div class="step__image">
+                        <img src="./assets/images/icons/vector-square.svg" alt="Ikona výber"/>
+                    </div>
+                </div>
+                <div class="step-connect"></div>
+                <div class="step">
+                    <div class="step__image">
+                        <img src="./assets/images/icons/video.svg" alt="Ikona nahrávky"/>
+                    </div>
+                </div>
+                <div class="step-connect"></div>
+                <div class="step">
+                    <div class="step__image">
+                        <img src="./assets/images/icons/group.svg" alt="Ikona vizualizácie"/>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <h1>Selecting modules and images</h1>
+            <div class="swiper modules">
+                <div class="swiper-scrollbar"></div>
+                <div class="swiper-wrapper">
+                  
+                </div>
+            </div>
+            <div class="spacer"></div>
+            <div class="swiper images">
+                <div class="swiper-wrapper">
+                </div>
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </main>
+        <footer>
+            <p><span id="images-selected">No</span> images selected</p>
+            <div class="btn-nav">
+                CONTINUE
+            </div>
+        </footer>
+
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+          <!-- Initialize Swiper -->
+        <script>
+            var swiperModules = new Swiper(".modules", {
+            slidesPerView: 2.8,
+            sliderPerGroup: 3,
+            spaceBetween: 30,
+            grabCursor: true,
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                hide: true,
+            },
+            });
+
+            var swiperImages = new Swiper(".images", {
+            slidesPerView: 5.5,
+            spaceBetween: 30,
+            cssMode: true,
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                hide: true,
+            },
+            });
+        </script>
+
+        <script src="./assets/scripts/modules.js"></script>
+
+    </body>
+</html>

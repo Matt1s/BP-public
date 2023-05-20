@@ -1,0 +1,82 @@
+{
+    "groups": {
+        "name": "Students",
+        "participants": {
+            "name": "Student-1",
+            "recordings": {
+                "module": "Module-1",
+                "images": [
+                    {
+                        "fixations": [
+                            {
+                                "x": "150",
+                                "y": "150",
+                                "timeSince": "2500",
+                                "lengthOfFixation": "500"
+                            },
+                            {
+                                "x": "200",
+                                "y": "200",
+                                "timeSince": "3000",
+                                "lengthOfFixation": "500"
+                            },
+                            {
+                                "x": "250",
+                                "y": "250",
+                                "timeSince": "6500",
+                                "lengthOfFixation": "2500"
+                            }
+                        ],
+                        "time": "15065"
+                    },
+                    {
+                        "fixations": [
+                            {
+                                "x": "150",
+                                "y": "150",
+                                "timeSince": "2500",
+                                "lengthOfFixation": "500"
+                            },
+                            {
+                                "x": "200",
+                                "y": "200",
+                                "timeSince": "3000",
+                                "lengthOfFixation": "500"
+                            },
+                            {
+                                "x": "250",
+                                "y": "250",
+                                "timeSince": "6500",
+                                "lengthOfFixation": "2500"
+                            }
+                        ],
+                        "time": "15065"
+                    },
+                    {
+                        "fixations": [
+                            {
+                                "x": "150",
+                                "y": "150",
+                                "timeSince": "2500",
+                                "lengthOfFixation": "500"
+                            },
+                            {
+                                "x": "200",
+                                "y": "200",
+                                "timeSince": "3000",
+                                "lengthOfFixation": "500"
+                            },
+                            {
+                                "x": "250",
+                                "y": "250",
+                                "timeSince": "6500",
+                                "lengthOfFixation": "2500"
+                            }
+                        ],
+                        "time": "15065"
+                    }
+                ]
+            }
+        }
+    }
+}

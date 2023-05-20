@@ -1,0 +1,24 @@
+{
+  "name": "bp-implementation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Matt1s/BP.git"
+  },
+  "author": "Matej Pakán",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Matt1s/BP/issues"
+  },
+  "homepage": "https://github.com/Matt1s/BP#readme",
+  "dependencies": {
+    "@sgratzl/chartjs-chart-boxplot": "^4.2.0",
+    "chart.js": "^4.3.0",
+    "express": "^4.18.2"
+  }
+}

@@ -1,0 +1,221 @@
+.module-control {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+
+    .module-checkbox {
+        border-radius: 2px;
+        background-color: #D9D9D9;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 10px;
+            height: auto;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.recordings-holder {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+
+    .recording-group {
+        background-color: #363636;
+        padding: 1rem;
+        color: white;
+        border-radius: 15px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 100px;
+        width: 400px;
+        cursor: pointer;
+
+        &.selected {
+            background-color: #254F1F;
+        }
+
+        &.partially-selected {
+            background-color: #794800;
+        }
+    }
+
+    .recording-group h3 {
+        text-align: left;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .recording-group small {
+        text-align: right;
+    }
+
+    .recording-group>* {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .recording-group small:nth-of-type(1) {
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
+}
+
+h2 {
+    color: white;
+    margin-top: 3rem;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.recordings {
+    background-color: #363636;
+    border-radius: 15px;
+    padding: 1rem;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
+
+    .recording {
+        background-color: #1E1E1E;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 0.5rem;
+        height: 40px;
+        cursor: pointer;
+
+        &.selected {
+            background-color: #254F1F;
+        }
+
+        .module-control {
+            margin-right: 5px;
+        }
+
+        p {
+            color: white;
+            margin-right: auto;
+            width: 100%;
+        }
+
+        small {
+            color: #6A6A6A;
+            width: 100%;
+            text-align: right;
+            margin-right: 1rem;
+        }
+    }
+}
+
+.blocker {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none !important;
+
+    .alert-box {
+        display: flex;
+        flex-direction: column;
+        background-color: #1E1E1E;
+        border-radius: 5px;
+        position: relative;
+        padding: 1rem;
+        color: white;
+        width: 500px;
+
+        .alert-close {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 50px;
+            height: 20px;
+            background-color: #FF4444;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top-right-radius: 5px;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 1.25rem;
+        }
+
+        p {
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin: 1rem 0;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+
+            .group-1 {
+                flex: 1;
+                display: flex;
+                justify-content: flex-start;
+            }
+
+            .group-2 {
+                flex: 1;
+                display: flex;
+                justify-content: flex-end;
+                gap: 1rem;
+            }
+
+            .btn {
+                font-weight: 600;
+                font-size: 0.8rem;
+                text-align: center;
+                width: 140px;
+                height: 30px;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &.btn-cancel {
+                    background-color: #363636;
+                }
+
+                &.btn-keep {
+                    background-color: #4BB543;
+                }
+
+                &.btn-reset {
+                    background-color: #FF9900;
+                }
+
+            }
+        }
+    }
+}

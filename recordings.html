@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <title>BP - 2. AOI selection</title>
+        <link rel="stylesheet" type="text/css" href="./assets/css/main.min.css" />
+        <link rel="stylesheet" type="text/css" href="./assets/css/recordings.min.css" />
+        
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+        <!-- jQuery -->
+        <script
+        src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+        crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="stepper">
+                <div class="step finished">
+                    <div class="step__image">
+                        <img src="./assets/images/icons/images.svg" alt="Ikona obrázky"/>
+                    </div>
+                </div>
+                <div class="step-connect finished"></div>
+                <div class="step finished">
+                    <div class="step__image">
+                        <img src="./assets/images/icons/vector-square.svg" alt="Ikona výber"/>
+                    </div>
+                </div>
+                <div class="step-connect finished"></div>
+                <div class="step current">
+                    <div class="step__image">
+                        <img src="./assets/images/icons/video.svg" alt="Ikona nahrávky"/>
+                    </div>
+                </div>
+                <div class="step-connect"></div>
+                <div class="step">
+                    <div class="step__image">
+                        <img src="./assets/images/icons/group.svg" alt="Ikona vizualizácie"/>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <h1>Selecting recordings</h1>
+            <div class="recordings-holder">
+
+            </div>
+            <h2>Selecting recordings in group "<span id='selecting-group'></span>"</h2>
+            <div class="recordings">
+
+            </div>
+        </main>
+
+        <!--div class="blocker">
+            <div class="alert-box">
+                <div class="alert-close">
+                    <img src="./assets/images/icons/window-close.svg" alt="Close"/>
+                </div>
+                <h2>Changing global times of interest</h2>
+                <p>Do you want to reset already overriden times of interest to new global settings?</p>
+                <div class="buttons">
+                    <div class="group-1">
+                        <div class="btn btn-cancel">
+                            CANCEL
+                        </div>
+                    </div>
+                    <div class="group-2">
+                        <div class="btn btn-keep">
+                            KEEP OVERRIDEN
+                        </div>
+                        <div class="btn btn-reset">
+                            RESET
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </!--div-->
+
+        <div class="blocker">
+            <div class="alert-box">
+                <div class="alert-close">
+                    <img src="./assets/images/icons/window-close.svg" alt="Close"/>
+                </div>
+                <h2>Use default area of interest</h2>
+                <p>You have not selected areas of interest (AOI) on multiple images. Do you want to continue
+                    while having selected the whole image?</p>
+                <div class="buttons">
+                    <div class="group-1">
+                        <div class="btn btn-cancel">
+                            CANCEL
+                        </div>
+                    </div>
+                    <div class="group-2">
+                        <div class="btn btn-keep">
+                            USE WHOLE IMAGES
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="btn-nav back">
+                BACK TO AOI
+            </div>
+            <div class="btn-nav positive">
+                CONTINUE
+            </div>
+        </footer>
+
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            const swiper = new Swiper('.module-swiper', {
+                slidesPerView: 12,
+                spaceBetween: 10,
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                    draggable: true,
+                },
+
+                autoplay: {
+                    delay: 0,
+                },
+            })
+        </script>
+
+        <script src="./assets/scripts/recordings.js"></script>
+
+    </body>
+</html>
