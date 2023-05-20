@@ -3,7 +3,9 @@
 var dataGlobal = [];
 
 function showGroups(index) {
+    console.log('showing groups')
     var data = dataGlobal
+    console.log(data)
     for (group of data.groups) {
         // count selected recordings
         var selected = group.recordings.filter(recording => recording.checked == "true").length;

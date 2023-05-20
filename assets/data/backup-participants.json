@@ -1,176 +1,82 @@
 {
-    "modules": [
+    "groups": [
         {
-            "name": "Pokémons",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in tempor lectus. Aenean at dolor purus. Curabitur varius tincidunt nunc non euismod. Vestibulum tempus venenatis vulputate.",
-            "images": [
+            "name": "Students",
+            "recordings": [
                 {
-                    "src": "/images/001.png",
-                    "checked": false,
-                    "aoi": {
-                        "x": 0,
-                        "y": 0,
-                        "width": 0,
-                        "height": 0
-                    }
+                    "name": "Student 1",
+                    "time": "5:27",
+                    "checked": "false"
                 },
                 {
-                    "src": "/images/002.png",
-                    "checked": false,
-                    "aoi": {
-                        "x": 0,
-                        "y": 0,
-                        "width": 0,
-                        "height": 0
-                    }
+                    "name": "Student 2",
+                    "time": "6:24",
+                    "checked": "false"
                 },
                 {
-                    "src": "/images/003.png",
-                    "checked": true,
-                    "aoi": {
-                        "x": 0,
-                        "y": 0,
-                        "width": 0,
-                        "height": 0
-                    }
+                    "name": "Student 3",
+                    "time": "6:12",
+                    "checked": "false"
+                },
+                {
+                    "name": "Student 4",
+                    "time": "8:01",
+                    "checked": "false"
+                },
+                {
+                    "name": "Student 5",
+                    "time": "6:59",
+                    "checked": "false"
+                },
+                {
+                    "name": "Student 6",
+                    "time": "4:57",
+                    "checked": "false"
+                },
+                {
+                    "name": "Student 7",
+                    "time": "5:27",
+                    "checked": "false"
+                },
+                {
+                    "name": "Student 8",
+                    "time": "6:24",
+                    "checked": "false"
                 }
             ]
         },
         {
-            "name": "Nature",
-            "description": "Sed ipsum ipsum, porta eu elit vitae, interdum placerat sem. Nullam vulputate posuere felis id maximus. Integer maximus a leo nec vulputate.",
-            "images": [
+            "name": "Teachers",
+            "recordings": [
                 {
-                    "src": "/images/nat-1.jpg",
-                    "checked": false,
-                    "aoi": {
-                        "x": 0,
-                        "y": 0,
-                        "width": 0,
-                        "height": 0
-                    }
+                    "name": "Teacher 1",
+                    "time": "8:27",
+                    "checked": "false"
                 },
                 {
-                    "src": "/images/nat-2.jpg",
-                    "checked": false,
-                    "aoi": {
-                        "x": 0,
-                        "y": 0,
-                        "width": 0,
-                        "height": 0
-                    }
+                    "name": "Teacher 2",
+                    "time": "7:08",
+                    "checked": "false"
                 },
                 {
-                    "src": "/images/nat-3.jpg",
-                    "checked": false,
-                    "aoi": {
-                        "x": 0,
-                        "y": 0,
-                        "width": 0,
-                        "height": 0
-                    }
-                }
-            ]
-        },
-        {
-            "name": "Charts",
-            "description": "Mauris interdum pulvinar maximus. Phasellus in ligula eu nibh tincidunt pellentesque vel eget urna. Nunc dictum quam sem.",
-            "images": [
-                {
-                    "src": "/images/chart-1.jpg",
-                    "checked": false,
-                    "aoi": {
-                        "x": 0,
-                        "y": 0,
-                        "width": 0,
-                        "height": 0
-                    }
+                    "name": "Teacher 3",
+                    "time": "6:12",
+                    "checked": "false"
                 },
                 {
-                    "src": "/images/chart-2.jpg",
-                    "checked": true,
-                    "aoi": {
-                        "x": 0,
-                        "y": 0,
-                        "width": 0,
-                        "height": 0
-                    }
+                    "name": "Teacher 4",
+                    "time": "8:09",
+                    "checked": "false"
                 },
                 {
-                    "src": "/images/chart-3.jpg",
-                    "checked": false,
-                    "aoi": {
-                        "x": 0,
-                        "y": 0,
-                        "width": 0,
-                        "height": 0
-                    }
+                    "name": "Teacher 5",
+                    "time": "6:59",
+                    "checked": "false"
                 },
                 {
-                    "src": "/images/chart-4.jpg",
-                    "checked": true,
-                    "aoi": {
-                        "x": 0,
-                        "y": 0,
-                        "width": 0,
-                        "height": 0
-                    }
-                },
-                {
-                    "src": "/images/chart-5.jpg",
-                    "checked": true,
-                    "aoi": {
-                        "x": 0,
-                        "y": 0,
-                        "width": 0,
-                        "height": 0
-                    }
-                }
-            ]
-        },
-        {
-            "name": "People",
-            "description": "Sed ipsum ipsum, porta eu elit vitae, interdum placerat sem. Nullam vulputate posuere felis id maximus. Integer maximus a leo nec vulputate.",
-            "images": [
-                {
-                    "src": "/images/people-1.jpg",
-                    "checked": false,
-                    "aoi": {
-                        "x": 0,
-                        "y": 0,
-                        "width": 0,
-                        "height": 0
-                    }
-                },
-                {
-                    "src": "/images/people-2.jpg",
-                    "checked": false,
-                    "aoi": {
-                        "x": 0,
-                        "y": 0,
-                        "width": 0,
-                        "height": 0
-                    }
-                },
-                {
-                    "src": "/images/people-3.jpg",
-                    "checked": false,
-                    "aoi": {
-                        "x": 0,
-                        "y": 0,
-                        "width": 0,
-                        "height": 0
-                    }
-                },
-                {
-                    "src": "/images/people-4.jpg",
-                    "checked": false,
-                    "aoi": {
-                        "x": 0,
-                        "y": 0,
-                        "width": 0,
-                        "height": 0
-                    }
+                    "name": "Teacher 6",
+                    "time": "4:57",
+                    "checked": "false"
                 }
             ]
         }

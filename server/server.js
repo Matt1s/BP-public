@@ -158,5 +158,5 @@ app.listen(3000, function () {
     // find the server url
     var host = this.address().address;
     var port = this.address().port;
-    console.log(`Server listening on ${host}:${port}`);
+    console.log(`http://localhost:${port}`);
 });
